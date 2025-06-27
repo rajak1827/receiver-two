@@ -1,0 +1,109 @@
+{
+  "name": "OTP Receiver Bot",
+  "description": "A Telegram bot that receives and verifies Telegram accounts, then provides monetary compensation to users.",
+  "repository": "https://github.com/yourusername/OTP-Receiver-Bot",
+  "logo": "https://graph.org/file/7e91d83f67d20f158cfdc.jpg",
+  "keywords": ["telegram", "bot", "pyrogram", "otp", "account-verification"],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API_ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API_HASH from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token from @BotFather",
+      "value": "7956731101:AAHCW9JcbgoOPJMBNvMNvIZFxLMyPvTYsrY",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "MongoDB connection string",
+      "value": "mongodb+srv://your_username:your_password@your_cluster.mongodb.net/your_database",
+      "required": true
+    },
+    "MUST_JOIN": {
+      "description": "Username of the channel/group users must join (without @)",
+      "value": "bklgrp",
+      "required": false
+    },
+    "SUDO_USERS": {
+      "description": "List of admin user IDs separated by commas",
+      "value": "7969722879,6405510803,6076230804",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram ID of the bot owner",
+      "value": "6405510803",
+      "required": true
+    },
+    "LOG_CHANNEL": {
+      "description": "Channel ID for logs",
+      "value": "7969722879",
+      "required": true
+    },
+    "SPAM_BOT_ID": {
+      "description": "Telegram ID of spam bot for verification",
+      "value": "178220800",
+      "required": true
+    },
+    "SESSION_CHANNEL": {
+      "description": "Channel ID for storing sessions",
+      "value": "7969722879",
+      "required": true
+    },
+    "CHECKOUT_CHANNEL": {
+      "description": "Channel ID for checkout notifications",
+      "value": "7969722879",
+      "required": true
+    },
+    "UPDATES_CHANNEL": {
+      "description": "Link to updates channel",
+      "value": "https://t.me/blank_dark",
+      "required": false
+    },
+    "UPI_ID": {
+      "description": "UPI ID for payments",
+      "value": "9568536542@fam",
+      "required": false
+    },
+    "USDT": {
+      "description": "USDT wallet address",
+      "value": "0x57455871d9d48Ab09A67C82C41B95204e6B376c7",
+      "required": false
+    },
+    "USDT_TRC20": {
+      "description": "USDT TRC20 wallet address",
+      "value": "TQ6v1x2k3z5Z4g7J8f9h8j8j8j8j8j8j8j8j8j8j",
+      "required": false
+    },
+    "USDT_BEP20": {
+      "description": "USDT BEP20 wallet address",
+      "value": "0x57455871d9d48Ab09A67C82C41B95204e6B376c7",
+      "required": false
+    },
+    "FA_PASSWORD": {
+      "description": "Default 2FA password for removal attempts",
+      "value": "your_default_password",
+      "required": false
+    },
+    "FA_HINT": {
+      "description": "Hint for 2FA password",
+      "value": "your_hint",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "success_url": "https://t.me/blank_dark"
+}
