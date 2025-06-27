@@ -7,7 +7,7 @@ API_ID = "27318249"
 API_HASH = "368c464c22f8db4bd452f66d43888dcb"
 
 BOT_TOKEN = "7363824392:AAGTbVZ3yowxoGFqjQvXgGDGccNKmluHJuI"
-MONGO_URL = "mongodb+srv://rohit6205881743:rohit6205881743@cluster0.soqtewz.mongodb.net/"
+MONGO_URL = "mongodb+srv://reveiver165:receiverpass1927@cluster0.bqbqz55.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MUST_JOIN = "virtualreciver"
 SUDO_USERS = [5948884710 , 6076230804]
 
